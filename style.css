@@ -239,6 +239,18 @@ textarea{
     font-size: 2rem;
 }
 
+.show{
+    position: relative;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.show.active{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
 
 
 
