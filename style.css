@@ -1,0 +1,326 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #383838;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    color:white;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+hr{
+    border-bottom: 0;
+    border-top:1px dotted white;
+    border-width: 5px;
+    width:6%;
+    opacity: 15%;
+}
+
+table{
+    margin:auto;
+}
+
+input{
+    padding:3%;
+    display: block;
+    margin: 2% 0;
+    font-family: sans-serif;
+    border: 1px solid black;
+    border-radius: 3%;
+}
+
+textarea{
+    display: block;
+    width:92%;
+    height: 200px;
+    margin: 2% 0;
+    padding: 2%;
+    font-family: sans-serif;
+    resize: none;
+    border: 1px solid black;
+    border-radius: 3%;
+}
+
+.fa-gear{
+    display: block;
+}
+
+
+/* Global class */
+.setSize{
+    max-width:1000px;
+    margin:auto;
+    background-color: #242323;
+    padding:2% 3%;
+}
+
+.setFlex{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* navigation section */
+#navigation{
+    height:63px;
+    width: 100%;
+    position: fixed;
+    background-color: #383838;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.nav-link{
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    color:white;
+}
+.nav-link:hover{
+    color: #7858A6;
+}
+
+.nav-item{
+    list-style: none;
+    padding: 0 30px;;
+
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger{
+    display:none;
+    cursor:pointer;
+}
+
+.bar{
+    display:block;
+    width:25px;
+    height:3px;
+    margin:5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    color:white;
+}
+
+/* header section */
+
+#heading{
+    height:900px;
+    width:100%;
+    background-image: url("images/3.png");
+    color:white;
+}
+
+.head-heading{
+    font-size: 5rem;
+    animation: head-load-title 800ms;
+}
+.head-info{
+    font-size: 2rem;
+    animation: head-load-info 800ms;
+}
+
+/* About me section */
+
+.about-me-container{
+    text-align: justify;
+    line-height: 2;
+}
+
+.my-skills{
+    text-align: center;
+}
+
+.fa-brands{
+    font-size: 4rem;
+}
+
+.my-skills-item{
+    width: calc(50%);
+}
+
+
+.html, .css, .js{
+    transition: color 0.2s ease-in-out;
+}
+
+.html:hover{
+    color:#E54C27;
+}
+.css:hover{
+    color:#379AD6;
+}
+.js:hover{
+    color:#F7DF1E;
+}
+
+
+/* projects section */
+
+.my-projects{
+    height:400px;
+}
+
+.my-projects-item{
+    width: calc(33%);
+    height:300px;
+    background-color: #383838;
+    margin: 2%;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.click-projects{
+    width:100%;
+    height:100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+
+
+/* contant me section */
+.left-side{
+    width:50%;
+}
+
+
+.right-side{
+    width:50%;
+}
+
+.input-name{
+    width: 90%;
+}
+
+.input-email{
+    width:90%;
+}
+
+.button{
+    width:97%;
+    color:white;
+    background-color: transparent;
+}
+
+/* socials section */
+
+.socials-container{
+    width:100%;
+    background-color: #242323;
+    height:100px;
+    margin-top: 4%;
+}
+
+.socials-item{
+    margin: 2%;
+}
+
+.socials-item > a > .fa-brands{
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes head-load-title{
+    0%{
+        transform:translateX(-100%);
+    }
+    100%{
+        transform:translateX(0%);
+    }
+}
+@keyframes head-load-info{
+    0%{
+        transform:translateX(100%);
+    }
+    100%{
+        transform:translateX(0%);
+    }
+}
+
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.spin{
+    animation: spin 4s linear infinite;
+}
+
+
+/* responsive section */
+
+@media(max-width: 768px){
+    .hamburger{
+        display: block;
+        position: absolute;
+        right:10%;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left:-150%;
+        top:47px;
+        gap:0;
+        flex-direction: column;
+        background-color: #242323;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin:16px 0;
+    }
+
+    .nav-menu.active{
+        left:0;
+    }
+
+}
