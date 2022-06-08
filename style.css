@@ -291,6 +291,10 @@ textarea{
         display: block;
         position: absolute;
         right:10%;
+        padding-right:10px;
+    }
+    #navigation{
+        padding-left: 10px;
     }
 
     .hamburger.active .bar:nth-child(2){
@@ -321,6 +325,10 @@ textarea{
 
     .nav-menu.active{
         left:0;
+    }
+
+    .email{
+        font-size: 12px;
     }
 
 }
