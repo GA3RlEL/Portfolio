@@ -151,7 +151,7 @@ textarea{
 }
 
 
-.html, .css, .js{
+.html, .css, .js,.git{
     transition: color 0.2s ease-in-out;
 }
 
@@ -163,6 +163,10 @@ textarea{
 }
 .js:hover{
     color:#F7DF1E;
+}
+
+.git:hover{
+    color:#F05033;
 }
 
 
